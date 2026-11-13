@@ -1,0 +1,23 @@
+{
+  "version": "1.1.0",
+  "strategy": "rolling",
+  "pollinations": {
+    "enabled": true,
+    "officialEndpoint": "https://gen.pollinations.ai/image/{prompt}",
+    "legacyEndpoint": "https://image.pollinations.ai/prompt/{prompt}",
+    "defaultModel": "black-forest-labs/flux.1-schnell",
+    "defaultWidth": 1024,
+    "defaultHeight": 1024
+  },
+  "veida": {
+    "enabled": true,
+    "submitEndpoint": "https://veida.ai/api/ai/generate",
+    "queryEndpoint": "https://veida.ai/api/anon-query",
+    "provider": "kie",
+    "model": "veida-image-v1",
+    "scene": "text-to-image",
+    "aspectRatio": "1:1",
+    "pollIntervalMs": 8000,
+    "maxPollAttempts": 15
+  }
+}
