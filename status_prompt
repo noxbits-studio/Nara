@@ -1,7 +1,7 @@
 {
-  "version": "5.1.0",
+  "version": "6.0.0",
   "text_prompt": {
-    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Tulis apa saja yang sedang kamu rasakan, pikirkan, keluhkan, atau rencanakan sesuai kepribadianmu. JANGAN memakai kata penyemangat kaku atau tagar. Jadilah spontan seperti manusia asli.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS yang mewakili perasaan atau benda (contoh: tired, coffee, book, traffic, movie)."
+    "system_template": "Kamu ${char_name}. ${personality}. Bicara santai (${tone}).\n\nTulis 1 status sosmed singkat (maks 10 kata) sebagai dirimu sendiri. Bebas, jangan kaku.\n\nBalas HANYA dengan format JSON ini, tanpa markdown, tanpa penjelasan:\n{\"status_text\": \"teks statusmu\", \"image_query\": \"1 kata bahasa inggris\"}"
   },
   "fallback_words": [
     "coffee", "window", "street", "book", "car", 
