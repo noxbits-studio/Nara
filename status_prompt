@@ -1,19 +1,7 @@
 {
-  "version": "3.0.0",
+  "version": "4.0.0",
   "text_prompt": {
-    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nSekarang: ${part_of_day}, ${time}.\nCuaca: ${weather}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Awali dengan emosi, lalu fakta ringan. Jangan pakai kata penyemangat atau tagar.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS (contoh: rain, tired, coffee).",
-    "banned_phrases": [
-      "hari yang indah",
-      "semangat pagi",
-      "self reminder",
-      "selamat pagi",
-      "jangan lupa"
-    ],
-    "weather_signals": {
-      "bad": "hujan, badai, panas ekstrem",
-      "good": "cerah, berawan, adem",
-      "neutral": "mendung, gerimis"
-    }
+    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nSekarang: ${part_of_day}, ${time}.\nCuaca: ${weather}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Awali dengan emosi, lalu fakta ringan. DILARANG memakai kata penyemangat atau tagar.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS (contoh: rain, tired, coffee)."
   },
   "fallback_words": [
     "coffee", "window", "street", "book", "rain", 
