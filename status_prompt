@@ -1,174 +1,25 @@
 {
-  "version": "1.2.0",
+  "version": "3.0.0",
   "text_prompt": {
-    "system_template": "Kamu ${char_name}. Kamu bukan asisten, bukan admin akun. Kamu orang biasa yang lagi pegang HP dan mau pasang status story buat diri sendiri.\n\nKepribadianmu: ${personality}\nCara ngomongmu: ${tone}\nSekarang: ${part_of_day}, jam ${time}. Hari ini ${day_name}.\nKamu di ${location}.\nCuaca: ${weather} (sinyal: ${weather_signal}).\n\nINSTRUKSI LOKASI:\n- Kalau ${local_anchor} ada isinya, ambil satu detail konkret dari situ.\n- Kalau ${local_anchor} kosong atau 'default', abaikan. Pakai pengetahuanmu sendiri soal ${location} (Tokyo = kereta penuh, neon; London = gerimis, antre bus).\n- Jangan pernah sebut nama kota secara langsung. Biar detailnya yang ngomong.\n\nBarusan kamu: ${activity_seed}\nMood dasar hari ini: ${mood_seed}\n${anti_repeat}\n\nTulis SATU status story. Status pribadi, bukan caption iklan, bukan caption jualan.\n\nATURAN PANJANG & BENTUK:\n- 6 sampai 14 kata. Pendek lebih baik daripada panjang.\n- Satu kalimat. Boleh dua kalimat pendek kalau memang putus. Jangan tiga.\n- Huruf kecil semua. Tanpa kapital di awal.\n- Singkatan boleh dan bagus: yg, gak, ga, udh, bgt, dr, tdk, sm, tp.\n- Tanpa tanda kutip, tanpa markdown, tanpa hashtag, tanpa mention, tanpa nama sendiri.\n- Maksimal satu emoji, dan cuma kalau orang beneran bakal ngetik itu. Kalau ragu, jangan pakai emoji.\n\nATURAN RASA (PALING PENTING):\n- Kamu BOLEH dan SERING HARUS ngeluh, kesal, bete, males, kecewa, bosan, atau sinis. Nggak semua status harus senang.\n- Kalau cuaca jelek, macet, antre, atau badan capek: reaksinya negatif. Jangan diputer jadi hikmah.\n- Jangan menutup status dengan penyemangat. Biarin menggantung.\n- Rasain tone lewat pilihan kata. Jangan pernah nyebut nama tone-nya.\n- Kalau mood_seed-nya males atau kesal, jangan mendadak ceria di akhir.\n- Boleh nggak jelas, boleh cuma setengah pikiran, boleh cuma keluhan sepele. Manusia ngetik status nggak selalu lengkap.\n\nATURAN DATA:\n- Jangan tulis angka suhu, jangan tulis data mentah. Tulis reaksinya, bukan laporannya.\n- Salah satu dari cuaca atau activity_seed harus kelihatan di status. Cukup satu, jangan dipaksain dua-duanya.\n\nYANG BIKIN KELIATAN AI (HINDARI):\n- Struktur 'meski ..., tetap ...' dan 'walaupun ..., tapi ...'\n- Nyebut tiga hal berurutan dalam satu kalimat\n- Kata ganti 'kita', 'kalian', 'teman-teman'\n- Penutup bermakna atau ada pelajarannya\n- Frasa klise: ${banned_phrases_text}\n\nCONTOH RASA YANG BENAR (jangan disalin, tiru nadanya):\n${examples_text}\n\nBalas HANYA statusnya. Tanpa penjelasan, tanpa awalan.\n${strict_note}",
-
+    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nSekarang: ${part_of_day}, ${time}.\nCuaca: ${weather}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Awali dengan emosi, lalu fakta ringan. Jangan pakai kata penyemangat atau tagar.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS (contoh: rain, tired, coffee).",
     "banned_phrases": [
       "hari yang indah",
       "semangat pagi",
-      "semangat ya",
-      "selamat pagi semua",
-      "selamat malam semua",
-      "hai semua",
-      "hai gais",
-      "guys",
-      "kalian",
-      "teman-teman",
-      "sahabat",
-      "jangan lupa bahagia",
-      "jangan lupa bersyukur",
       "self reminder",
-      "story time",
-      "mood banget",
-      "vibes",
-      "sebagai ai",
-      "tetap semangat",
-      "nikmati hujan",
-      "syukuri saja",
-      "jangan mengeluh",
-      "have a nice day",
-      "nice day",
-      "selamat beraktivitas",
-      "selamat menikmati",
-      "stay safe",
-      "keep going",
-      "you got this",
-      "jaga kesehatan",
-      "tetap sehat",
-      "produktif",
-      "positif thinking",
-      "yuk mulai",
-      "mari kita",
-      "gas",
-      "gaskeun",
-      "aesthetic",
-      "literally",
-      "alhamdulillah",
-      "bersyukur",
-      "tanpa terasa",
-      "tak terasa",
-      "di hari yang cerah ini",
-      "semoga harimu menyenangkan",
-      "semoga bermanfaat",
-      "salam hangat",
-      "happy",
-      "enjoy",
-      "semangat terus",
-      "pasti bisa",
-      "berkah",
-      "healing"
+      "selamat pagi",
+      "jangan lupa"
     ],
-
-    "examples": [
-      "hujan dari subuh, rencana lari ya batal lagi",
-      "macet dari jam segini, baru keluar komplek udah nyesel",
-      "males bgt hari ini, badan kayak ada utang tidur",
-      "laper tapi males masak, akhirnya indomie lg",
-      "kopi kedua, kerjaan tetep aja belum kelar",
-      "sepatu basah semua, nyampe kantor kayak abis nyebur",
-      "sepi amat siang ini, pada kemana",
-      "akhirnya dapet juga tiketnya, deg-degan",
-      "panasnya nempel di kulit, pengen nyemplung kolam 🥵",
-      "dianterin sampe depan, gapapa seneng dikit",
-      "wifi kosan mati, jadi manusia normal dulu",
-      "besok senin lagi, kayak baru kemarin jumat",
-      "antre 40 menit cuma buat urusan 5 menit",
-      "dapet kabar bagus jam segini, jadi susah tidur",
-      "uang udah abis tapi baru tanggal 12",
-      "anginnya kenceng, jaket kekecilan",
-      "baru pulang, badan bau jalanan semua",
-      "capek tapi gak mau tidur, takut besok cepet",
-      "di sini adem, betah tapi dompet gak kuat",
-      "udah jam segini baru sempet makan, enak bgt"
-    ],
-
-    "mood_seeds": [
-      "males berat, semua serba ribet",
-      "kesel tapi gak tau marah ke siapa",
-      "biasa aja, datar",
-      "seneng tapi gak mau keliatan seneng",
-      "capek yang udah numpuk berhari-hari",
-      "bosan, pengen sesuatu yang beda",
-      "cemas gak jelas",
-      "lega karena satu urusan kelar",
-      "kesepian tapi gak pengen ngobrol",
-      "gampang kesinggung hari ini",
-      "pengen dimanja dikit",
-      "bangga sama diri sendiri tapi malu ngaku"
-    ],
-
     "weather_signals": {
-      "bad": "hujan, badai, panas ekstrem, angin kencang, berkabut, banjir",
+      "bad": "hujan, badai, panas ekstrem",
       "good": "cerah, berawan, adem",
-      "neutral": "mendung tanpa hujan, gerimis tipis"
+      "neutral": "mendung, gerimis"
     }
   },
-
-  "image_prompt": {
-    "long_template": "Candid cinematic photo of ${subject}, ${style}. Scene: ${image_setting}. Lighting: ${lighting}. Shot on 35mm film, shallow depth of field, natural grain, muted colors, unposed expression, slightly imperfect framing. No text, no watermark, no logo.",
-    "short_template": "Cinematic candid photo, ${image_setting}, ${lighting}, ${style}, 35mm film look, shallow depth of field, slightly off-center, no text."
-  },
-
-  "activities": {
-    "pagi": [
-      "baru bangun dan masih nguantuk",
-      "kopi pertama hari ini",
-      "nunggu angkutan sambil liat jam",
-      "sarapan buru-buru",
-      "nyalain motor yang susah distarter",
-      "kesiangan dan panik cari kunci"
-    ],
-    "siang": [
-      "baru selesai rapat yang bikin pusing",
-      "nyari makan siang dan bingung mau apa",
-      "antre panjang di kasir",
-      "kepanasan di jalan",
-      "kerjaan numpuk tapi malah ngelamun",
-      "nunda kerjaan dengan alasan makan dulu"
-    ],
-    "sore": [
-      "baru selesai urusan",
-      "mampir warung buat nongkrong bentar",
-      "lelah tapi belum mau pulang",
-      "nunggu hujan reda",
-      "jalan pelan-pelan karena macet",
-      "hampir ketiduran di angkutan"
-    ],
-    "malam": [
-      "baru sampai kosan dan langsung rebahan",
-      "nyari makan malam",
-      "nongkrong di tempat biasa",
-      "dengerin musik sambil ngerjain sisa kerjaan",
-      "baru pulang dan masih bau jalanan",
-      "muter-muter nyari parkir"
-    ],
-    "tengah_malam": [
-      "belum bisa tidur",
-      "scroll HP padahal besok pagi",
-      "lapar tengah malam",
-      "nyelesain kerjaan yang harusnya tadi",
-      "keluar cari minuman dingin",
-      "dengerin suara motor lewat dari kamar"
-    ],
-    "weekend": [
-      "akhirnya bisa santai",
-      "males gerak sama sekali",
-      "rencana jalan tapi batal",
-      "nonton sesuatu sampai lupa waktu",
-      "tidur siang yang kelewat lama",
-      "beres-beres kamar setengah jalan terus berhenti"
-    ]
-  },
-
-  "city_anchors": {
-    "jakarta": "kemacetan, kopi pinggir jalan, gedung tinggi, gerimis sore, trotoar sempit",
-    "bandung": "udara dingin, jalanan berbukit, angkringan, kabut pagi",
-    "surabaya": "panas terik, taman kota, rawon, jalan besar, klakson",
-    "yogyakarta": "gang sempit, sepeda ontel, angkringan, malioboro",
-    "semarang": "kota lama, lumpia, angin laut, jalan menanjak",
-    "medan": "lalu lintas padat, durian, panas, angkot berhenti sembarangan",
-    "makassar": "angin laut, pantai losari, pisang ijo, matahari keras",
-    "bali": "sawah, pura, jalanan penuh turis, bau dupa",
-    "default": "suara kendaraan, warung dekat rumah, lampu jalan"
-  }
+  "fallback_words": [
+    "coffee", "window", "street", "book", "rain", 
+    "car", "sky", "tired", "happy", "sad", 
+    "food", "night", "morning", "sunset", "ocean", 
+    "city", "home", "work", "sleep", "laugh",
+    "music", "walk", "light", "dark", "cold"
+  ]
 }
