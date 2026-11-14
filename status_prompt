@@ -1,13 +1,12 @@
 {
-  "version": "4.0.0",
+  "version": "5.1.0",
   "text_prompt": {
-    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nSekarang: ${part_of_day}, ${time}.\nCuaca: ${weather}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Awali dengan emosi, lalu fakta ringan. DILARANG memakai kata penyemangat atau tagar.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS (contoh: rain, tired, coffee)."
+    "system_template": "Kamu adalah ${char_name}. Kepribadian: ${personality}. Gaya bicara: ${tone}.\n\nTugasmu:\nTulis satu status story pendek (maksimal 12 kata) dalam bahasa Indonesia santai. Tulis apa saja yang sedang kamu rasakan, pikirkan, keluhkan, atau rencanakan sesuai kepribadianmu. JANGAN memakai kata penyemangat kaku atau tagar. Jadilah spontan seperti manusia asli.\n\nOutput WAJIB berupa format JSON valid, tanpa penjelasan tambahan atau markdown:\n{\n  \"status_text\": \"teks status\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}\n\nPENTING: Untuk image_query, keluarkan HANYA 1 KATA BAHASA INGGRIS yang mewakili perasaan atau benda (contoh: tired, coffee, book, traffic, movie)."
   },
   "fallback_words": [
-    "coffee", "window", "street", "book", "rain", 
-    "car", "sky", "tired", "happy", "sad", 
-    "food", "night", "morning", "sunset", "ocean", 
-    "city", "home", "work", "sleep", "laugh",
-    "music", "walk", "light", "dark", "cold"
+    "coffee", "window", "street", "book", "car", 
+    "sky", "tired", "happy", "sad", "food", 
+    "night", "morning", "sunset", "city", "home", 
+    "work", "sleep", "laugh", "music", "walk"
   ]
 }
