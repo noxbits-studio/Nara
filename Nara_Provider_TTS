@@ -12,6 +12,7 @@
       "defaultVoice": "21m00Tcm4TlvDq8ikWAM",
       "tier": "Paid"
     },
+{
   "id": "unifiedtts",
   "displayName": "UnifiedTTS (Edge)",
   "baseUrl": "https://unifiedtts.com/",
@@ -22,6 +23,7 @@
   "defaultModel": "edge-tts",
   "defaultVoice": "id-ID-GadisNeural",
   "tier": "Free"
+},
     {
       "id": "openai",
       "displayName": "OpenAI",
