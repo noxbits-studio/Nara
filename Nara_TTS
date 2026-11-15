@@ -1,0 +1,40 @@
+{
+  "tts_providers": [
+    {
+      "id": "elevenlabs",
+      "displayName": "ElevenLabs",
+      "baseUrl": "https://api.elevenlabs.io/",
+      "apiFormat": "ElevenLabs",
+      "authType": "Header",
+      "supportsModelsFetch": true,
+      "supportsVoicesFetch": true,
+      "defaultModel": "eleven_multilingual_v2",
+      "defaultVoice": "21m00Tcm4TlvDq8ikWAM",
+      "tier": "Paid"
+    },
+    {
+      "id": "openai",
+      "displayName": "OpenAI",
+      "baseUrl": "https://api.openai.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "supportsModelsFetch": true,
+      "supportsVoicesFetch": false,
+      "defaultModel": "tts-1",
+      "defaultVoice": "alloy",
+      "tier": "Paid"
+    },
+    {
+      "id": "edge_tts",
+      "displayName": "Edge TTS (Gratis)",
+      "baseUrl": "https://api.edge-tts.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "None",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": true,
+      "defaultModel": "default",
+      "defaultVoice": "id-ID-GadisNeural",
+      "tier": "Free"
+    }
+  ]
+}
