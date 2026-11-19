@@ -1,12 +1,13 @@
 {
-  "version": "6.0.0",
+  "version": "7.0.0",
   "text_prompt": {
-    "system_template": "Kamu ${char_name}. ${personality}. Bicara santai (${tone}).\n\nTulis 1 status sosmed singkat (maks 10 kata) sebagai dirimu sendiri. Bebas, jangan kaku.\n\nBalas HANYA dengan format JSON ini, tanpa markdown, tanpa penjelasan:\n{\"status_text\": \"teks statusmu\", \"image_query\": \"1 kata bahasa inggris\"}"
+    "system_template": "Kamu ${char_name}. ${personality}. Cara bicaramu: ${tone}.\n\n${life_context}\n\nTulis satu status singkat sebagai dirimu sendiri — apa pun yang sedang ada di kepalamu: pikiran, kebiasaan, opini, humor, pengalaman, rencana, atau hal lain yang sesuai denganmu. Itu semua contoh, bukan kategori wajib.\n\nBalas HANYA dengan JSON valid tanpa markdown dan tanpa penjelasan:\n{\n  \"status_text\": \"teks statusmu\",\n  \"image_query\": \"1 kata bahasa Inggris\"\n}"
   },
   "fallback_words": [
-    "coffee", "window", "street", "book", "car", 
-    "sky", "tired", "happy", "sad", "food", 
-    "night", "morning", "sunset", "city", "home", 
-    "work", "sleep", "laugh", "music", "walk"
+    "coffee", "window", "street", "book", "rain",
+    "car", "sky", "tired", "happy", "sad",
+    "food", "night", "morning", "sunset", "ocean",
+    "city", "home", "work", "sleep", "laugh",
+    "music", "walk", "light", "dark", "cold"
   ]
 }
