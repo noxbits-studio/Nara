@@ -1,23 +1,112 @@
 {
-  "version": "1.1.0",
-  "strategy": "rolling",
-  "pollinations": {
-    "enabled": true,
-    "officialEndpoint": "https://gen.pollinations.ai/image/{prompt}",
-    "legacyEndpoint": "https://image.pollinations.ai/prompt/{prompt}",
-    "defaultModel": "black-forest-labs/flux.1-schnell",
-    "defaultWidth": 1024,
-    "defaultHeight": 1024
-  },
-  "veida": {
-    "enabled": true,
-    "submitEndpoint": "https://veida.ai/api/ai/generate",
-    "queryEndpoint": "https://veida.ai/api/anon-query",
-    "provider": "kie",
-    "model": "veida-image-v1",
-    "scene": "text-to-image",
-    "aspectRatio": "1:1",
-    "pollIntervalMs": 8000,
-    "maxPollAttempts": 15
-  }
+  "tts_providers": [
+    {
+      "id": "elevenlabs",
+      "displayName": "ElevenLabs",
+      "baseUrl": "https://api.elevenlabs.io/",
+      "apiFormat": "ElevenLabs",
+      "authType": "Header",
+      "supportsModelsFetch": true,
+      "supportsVoicesFetch": true,
+      "defaultModel": "eleven_multilingual_v2",
+      "defaultVoice": "21m00Tcm4TlvDq8ikWAM",
+      "tier": "Paid"
+    },
+    {
+      "id": "unifiedtts",
+      "displayName": "UnifiedTTS (Edge)",
+      "baseUrl": "https://unifiedtts.com/",
+      "apiFormat": "UnifiedTTS",
+      "authType": "Header",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": false,
+      "defaultModel": "edge-tts",
+      "defaultVoice": "id-ID-GadisNeural",
+      "tier": "Free"
+    },
+    {
+      "id": "openai",
+      "displayName": "OpenAI",
+      "baseUrl": "https://api.openai.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "supportsModelsFetch": true,
+      "supportsVoicesFetch": false,
+      "defaultModel": "tts-1",
+      "defaultVoice": "alloy",
+      "tier": "Paid"
+    },
+    {
+      "id": "edge_tts",
+      "displayName": "Edge TTS (Gratis)",
+      "baseUrl": "https://api.edge-tts.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "None",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": true,
+      "defaultModel": "default",
+      "defaultVoice": "id-ID-GadisNeural",
+      "tier": "Free"
+    },
+    {
+      "id": "kokoro_local",
+      "displayName": "Kokoro-FastAPI (Lokal)",
+      "baseUrl": "http://10.0.2.2:8880/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "None",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": true,
+      "defaultModel": "kokoro",
+      "defaultVoice": "af_bella",
+      "tier": "Free"
+    },
+    {
+      "id": "openai_edge_tts_local",
+      "displayName": "openai-edge-tts (Lokal)",
+      "baseUrl": "http://10.0.2.2:5050/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "None",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": false,
+      "defaultModel": "tts-1",
+      "defaultVoice": "alloy",
+      "tier": "Free"
+    },
+    {
+      "id": "together_tts",
+      "displayName": "Together AI (TTS)",
+      "baseUrl": "https://api.together.xyz/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": false,
+      "defaultModel": "cartesia/sonic",
+      "defaultVoice": "helpful woman",
+      "tier": "Free"
+    },
+    {
+      "id": "siliconflow_tts",
+      "displayName": "SiliconFlow (TTS)",
+      "baseUrl": "https://api.siliconflow.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": false,
+      "defaultModel": "FunAudioLLM/CosyVoice2-0.5B",
+      "defaultVoice": "FunAudioLLM/CosyVoice2-0.5B:anna",
+      "tier": "Free"
+    },
+    {
+      "id": "deepinfra_tts",
+      "displayName": "DeepInfra (TTS)",
+      "baseUrl": "https://api.deepinfra.com/v1/openai/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "supportsModelsFetch": false,
+      "supportsVoicesFetch": false,
+      "defaultModel": "hexgrad/Kokoro-82M",
+      "defaultVoice": "af_bella",
+      "tier": "Credit"
+    }
+  ]
 }
