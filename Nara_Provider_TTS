@@ -8,8 +8,8 @@
       "authType": "Header",
       "supportsModelsFetch": true,
       "supportsVoicesFetch": true,
-      "defaultModel": "eleven_multilingual_v2",
-      "defaultVoice": "21m00Tcm4TlvDq8ikWAM",
+      "defaultModel": "eleven_flash_v2_5",
+      "defaultVoice": "cgSgspJ2msm6clMCkdW9",
       "tier": "Paid"
     },
 {
