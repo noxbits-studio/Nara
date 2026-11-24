@@ -1,0 +1,358 @@
+{
+  "providers": [
+    {
+      "id": "groq",
+      "displayName": "Groq",
+      "baseUrl": "https://api.groq.com/openai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "gemini",
+      "displayName": "Gemini",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "gemini2",
+      "displayName": "Gemini 2",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+      "apiFormat": "Gemini",
+      "authType": "QueryParam",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "cloudflare",
+      "displayName": "Cloudflare Workers AI",
+      "baseUrl": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free",
+      "requiredParams": [
+        "account_id"
+      ],
+      "defaultModel": "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+    },
+    {
+      "id": "github",
+      "displayName": "GitHub Models",
+      "baseUrl": "https://models.github.ai/inference/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free",
+      "defaultModel": "openai/gpt-4.1-mini"
+    },
+    {
+      "id": "cerebras",
+      "displayName": "Cerebras",
+      "baseUrl": "https://api.cerebras.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "sambanova",
+      "displayName": "SambaNova",
+      "baseUrl": "https://api.sambanova.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "mistral",
+      "displayName": "Mistral AI",
+      "baseUrl": "https://api.mistral.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "openrouter",
+      "displayName": "OpenRouter",
+      "baseUrl": "https://openrouter.ai/api/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "huggingface",
+      "displayName": "Hugging Face Router",
+      "baseUrl": "https://router.huggingface.co/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "nvidia",
+      "displayName": "NVIDIA NIM",
+      "baseUrl": "https://integrate.api.nvidia.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "together",
+      "displayName": "Together AI",
+      "baseUrl": "https://api.together.xyz/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "cohere",
+      "displayName": "Cohere",
+      "baseUrl": "https://api.cohere.ai/compatibility/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "zai",
+      "displayName": "Z.ai (GLM)",
+      "baseUrl": "https://api.z.ai/api/paas/v4/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "siliconflow",
+      "displayName": "SiliconFlow",
+      "baseUrl": "https://api.siliconflow.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    },
+    {
+      "id": "deepseek",
+      "displayName": "DeepSeek",
+      "baseUrl": "https://api.deepseek.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "openai",
+      "displayName": "OpenAI",
+      "baseUrl": "https://api.openai.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat",
+        "TTS"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "anthropic",
+      "displayName": "Anthropic (Claude)",
+      "baseUrl": "https://api.anthropic.com/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "xai",
+      "displayName": "xAI (Grok)",
+      "baseUrl": "https://api.x.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "perplexity",
+      "displayName": "Perplexity",
+      "baseUrl": "https://api.perplexity.ai/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "fireworks",
+      "displayName": "Fireworks AI",
+      "baseUrl": "https://api.fireworks.ai/inference/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "hyperbolic",
+      "displayName": "Hyperbolic",
+      "baseUrl": "https://api.hyperbolic.xyz/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "novita",
+      "displayName": "Novita AI",
+      "baseUrl": "https://api.novita.ai/openai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "deepinfra",
+      "displayName": "DeepInfra",
+      "baseUrl": "https://api.deepinfra.com/v1/openai/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "dashscope",
+      "displayName": "Alibaba Qwen (DashScope)",
+      "baseUrl": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "moonshot",
+      "displayName": "Moonshot (Kimi)",
+      "baseUrl": "https://api.moonshot.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "venice",
+      "displayName": "Venice AI",
+      "baseUrl": "https://api.venice.ai/api/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Paid"
+    },
+    {
+      "id": "chutes",
+      "displayName": "Chutes",
+      "baseUrl": "https://llm.chutes.ai/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "Bearer",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Credit"
+    },
+    {
+      "id": "keyless_ai",
+      "displayName": "KeylessAI (Tanpa Key)",
+      "baseUrl": "https://keylessai.thryx.workers.dev/v1/",
+      "apiFormat": "OpenAi",
+      "authType": "None",
+      "capabilities": [
+        "Chat"
+      ],
+      "supportsStreaming": true,
+      "tier": "Free"
+    }
+  ]
+}
